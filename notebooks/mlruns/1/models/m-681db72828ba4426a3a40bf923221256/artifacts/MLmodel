@@ -1,0 +1,30 @@
+artifact_path: /Users/shahmeer.faheem/credit-card-fraud-detector/notebooks/mlruns/1/models/m-681db72828ba4426a3a40bf923221256/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types:
+    - imblearn.over_sampling._smote.base.SMOTE
+    - imblearn.pipeline.Pipeline
+    - xgboost.core.Booster
+    - xgboost.sklearn.XGBClassifier
+    - sklearn.linear_model._logistic.LogisticRegression
+    - sklearn.ensemble._forest.RandomForestClassifier
+    - sklearn.preprocessing._data.StandardScaler
+mlflow_version: 3.14.0
+model_id: m-681db72828ba4426a3a40bf923221256
+model_size_bytes: 489786
+model_uuid: m-681db72828ba4426a3a40bf923221256
+prompts: null
+run_id: 666ede11fb6942c4b0fb462d490b075b
+utc_time_created: '2026-07-23 23:00:07.233537'
