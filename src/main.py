@@ -4,8 +4,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
-# load the saved model once when the server starts
-model = joblib.load('../models/fraud_detector.pkl')
+# load the saved model once when the server starts, but define before hand main.py path for local and docker use
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model = joblib.load(os.path.join(BASE_DIR, 'models', 'fraud_detector.pkl'))
 
 # initialize FastAPI app
 app = FastAPI(
